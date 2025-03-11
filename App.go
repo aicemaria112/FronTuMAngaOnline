@@ -43,7 +43,7 @@ func startServer() {
 	app.Get("api/v1/get-manga", controllers.GetPageFromTMOWithCookie)
 
 	port := getPort()
-	app.Listen(port)
+	app.Listen("0.0.0.0" + port)
 }
 
 func getPort() string {
