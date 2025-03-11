@@ -22,8 +22,9 @@ WORKDIR /app
 # Copy the binary from the builder stage
 COPY --from=builder /app/tumangaonline-api .
 
-# Expose the port the app runs on
-EXPOSE 5000
+# Railway automatically assigns a PORT environment variable
+# We'll use that instead of hardcoding 5000
+EXPOSE ${PORT:-5000}
 
 # Command to run the application
 CMD ["./tumangaonline-api"]
