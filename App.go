@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/julioolivares90/TumangaOnlineApi/controllers"
-	"os"
 )
 
 type ResponsePath struct {
